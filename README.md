@@ -9,3 +9,12 @@ A mini game stemming from the iconic mobile game "Flappy Bird". I made this fun 
 <img width="330" alt="Screenshot 2025-06-08 at 11 27 57 PM" src="https://github.com/user-attachments/assets/ab8cf947-f560-467b-a28c-0cc611b45c42" />
 
 <img width="330" alt="Screenshot 2025-06-08 at 11 32 25 PM" src="https://github.com/user-attachments/assets/837c2ad2-9369-4e30-89a1-d2d2fba0a83c" />
+
+
+## How to run
+- use FlappyChick.py
+
+## Technologies 
+- pygame
+- python
+- STL 
