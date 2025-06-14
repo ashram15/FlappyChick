@@ -8,14 +8,18 @@ from pygame import font
 from utils import load_high_score, save_high_score
 
 pygame.init()
+
 screen = pygame.display.set_mode((600, 600))
 clock = pygame.time.Clock()
 font = pygame.font.Font(None, 40)
 
+chicken_img = pygame.image.load("flappychick.png").convert_alpha()
+chicken_img = pygame.transform.scale(chicken_img, (150, 160))  # match bird size
+
 total_score = 0
 high_score = load_high_score()
 
-bird = pygame.Rect(100, 250, 30, 30)  # x, y, width, height
+bird = pygame.Rect(100, 250, 40, 40)  # x, y, width, height
 gravity = 0.5
 bird_movement: int = 0
 jump_strength = -10
@@ -30,7 +34,7 @@ ground_x = 0
 
 # Pipe scroll setup
 pipe_width = 80
-pipe_gap = random.randint(120,210)
+pipe_gap = random.randint(180,230)
 pipe_x = 600
 pipe_height = random.randint(100, 300)
 
@@ -210,7 +214,12 @@ while True:
         pygame.draw.rect(screen, (52, 152, 219), (pipe_x, pipe_height + pipe_gap, pipe_width, 600))
 
         # Draw bird
-        pygame.draw.rect(screen, (255, 255, 0), bird)  # Yellow bird
+        #pygame.draw.rect(screen, (255, 255, 0), bird)  # Yellow bird
+        # Draw chicken image
+        # Offset image so it's centered over the bird rect
+        image_rect = chicken_img.get_rect(center=bird.center)
+        screen.blit(chicken_img, image_rect)
+
 
         #Game end conditions
         if bird. y >= 480 or \
@@ -221,6 +230,9 @@ while True:
             reset_game()
             start_screen()
 
+        #DEBUGGING
+        #print("Bird:", bird)
+        #print("Pipe:", pipe_x, pipe_height, pipe_gap)
 
         pygame.display.flip()
         clock.tick(60)
