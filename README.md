@@ -13,6 +13,7 @@ A mini game stemming from the iconic mobile game "Flappy Bird". I made this fun 
 
 ## How to run
 - use FlappyChick.py
+- use utils.py
 
 ## Technologies 
 - pygame
