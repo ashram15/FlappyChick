@@ -1,20 +1,24 @@
 import random
 import sys
 
+
 import pygame
 from pygame import font
+
+from utils import load_high_score, save_high_score
 
 pygame.init()
 screen = pygame.display.set_mode((600, 600))
 clock = pygame.time.Clock()
 font = pygame.font.Font(None, 40)
 
+total_score = 0
+high_score = load_high_score()
+
 bird = pygame.Rect(100, 250, 30, 30)  # x, y, width, height
 gravity = 0.5
 bird_movement: int = 0
 jump_strength = -10
-
-total_score = 0
 
 # Game state
 game_over = False
@@ -40,8 +44,12 @@ clouds = [
     {"x": 50,  "y": 150}
 ]
 
+
 def draw_game_over():
+
     screen.fill((215, 189, 226))  #  background
+
+    global high_score
 
     text_surface = font.render("Game Over!", True, (118, 68, 138))
     text_rect = text_surface.get_rect(center=(300, 280))
@@ -57,6 +65,11 @@ def draw_game_over():
     pygame.draw.rect(screen, (255, 255, 255), restart_button)
     restart_text = font.render("Restart", True, (0, 0, 0))
     screen.blit(restart_text, restart_button.move(25, 10))
+
+    # Update high score
+    if total_score > high_score:
+        high_score = total_score
+        save_high_score(high_score)
 
     pygame.display.flip()
 
@@ -110,6 +123,10 @@ def start_screen():
         button_text = font.render("Start", True, (0, 0, 0))
         button_text_rect = button_text.get_rect(center=button_rect.center)
         screen.blit(button_text, button_text_rect)
+
+        #Draw high score
+        high_score_text = font.render(f"High Score: { high_score}", True, (118, 68, 138))
+        screen.blit(high_score_text, high_score_text.get_rect(center=(300, 200)))
 
         pygame.display.flip()
 
