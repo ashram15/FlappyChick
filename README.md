@@ -15,7 +15,7 @@ A mini game stemming from the iconic mobile game "Flappy Bird". I made this fun 
 - use FlappyChick.py
 - use utils.py
 
-## Technologies 
+## Skills  
 - pygame
 - python
 - STL 
