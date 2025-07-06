@@ -13,7 +13,7 @@ screen = pygame.display.set_mode((600, 600))
 clock = pygame.time.Clock()
 font = pygame.font.Font(None, 40)
 
-chicken_img = pygame.image.load("flappychick.png").convert_alpha()
+chicken_img = pygame.image.load("assets/flappychick.png").convert_alpha()
 chicken_img = pygame.transform.scale(chicken_img, (150, 160))  # match bird size
 
 total_score = 0

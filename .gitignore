@@ -11,3 +11,6 @@ venv/
 # OS files
 .DS_Store
 Thumbs.db
+
+#Other files
+high_score.txt
