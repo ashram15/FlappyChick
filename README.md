@@ -6,18 +6,23 @@ A mini-game stemming from the iconic mobile game <strong>"Flappy Bird"</strong>.
 - Also includes a moving UI design.
 - Keeps track of high score in device 
 
-<img width="330" alt="game1" src="https://github.com/user-attachments/assets/676ccd0e-a192-4fb3-966a-cdf3852901ef" />
-
-<img width="330" alt="game2" src="https://github.com/user-attachments/assets/5c9e2248-8ea6-4eb2-b815-f19e0079896a" />
-
-<img width="330" alt="game3" src="https://github.com/user-attachments/assets/17532e53-222d-47fe-86f5-707f657a8c8c" />
-
+![FLAPPYCHICKDEMO](../../Desktop/FLAPPYCHICKDEMO.gif)
 
 ## How to run
-- use FlappyChick.py
-- use utils.py
+1. Clone Github Repo:  
+    <code>git clone https://github.com/ashram15/FlappyChick.git</code>
+2. Navigate to Project Directory  
+   <code> cd FlappyChick </code>
+3. Install all dependencies in <b>requirements.txt</b>  
+    <code>pip install -r requirements.txt</code>
+4. Run Program   
+    <code>python3 FlappyChick.py</code>
 
-## Skills  
+## Gameplay
+1. Press the space bar to navigate through the pipes.
+2. Avoid hitting the pipes or falling
+3. Try to beat your high score! 
+
+## Built With  
 - pygame
 - python
-- STL 

@@ -230,9 +230,5 @@ while True:
             reset_game()
             start_screen()
 
-        #DEBUGGING
-        #print("Bird:", bird)
-        #print("Pipe:", pipe_x, pipe_height, pipe_gap)
-
         pygame.display.flip()
         clock.tick(60)
