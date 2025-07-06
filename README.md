@@ -6,7 +6,7 @@ A mini-game stemming from the iconic mobile game <strong>"Flappy Bird"</strong>.
 - Also includes a moving UI design.
 - Keeps track of high score in device 
 
-![FLAPPYCHICKDEMO](../../Desktop/FLAPPYCHICKDEMO.gif)
+![FLAPPYCHICKDEMO](FLAPPYCHICKDEMO.gif)
 
 ## How to run
 1. Clone Github Repo:  
